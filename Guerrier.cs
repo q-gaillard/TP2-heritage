@@ -24,7 +24,7 @@ class Guerrier : Personnage
         this.armure = 0;
     }
 
-    public new void RecevoirDegat(int degat)
+    public override void RecevoirDegat(int degat)
     {
         if (degat-armure > pointDeVie)
         {
@@ -43,7 +43,7 @@ class Guerrier : Personnage
         }
     }
 
-    public new void Afficher()
+    public override void Afficher()
     {
         Console.WriteLine("------ Information du guerrier ------");
         Console.WriteLine($"nom : {nom}");

@@ -24,7 +24,7 @@ class Guerrier : Personnage
         this.puissanceMagique = 0;
     }
 
-    public new void Afficher()
+    public override void Afficher()
     {
         Console.WriteLine("------ Information du magicien ------");
         Console.WriteLine($"nom : {nom}");

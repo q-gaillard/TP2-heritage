@@ -34,7 +34,7 @@ class Personnage
         this.pointDeVie = 0;
     }
 
-    public void RecevoirDegat(int degat)
+    public virtual void RecevoirDegat(int degat)
     {
         if (degat > pointDeVie)
         {
@@ -46,7 +46,12 @@ class Personnage
         }
     }
 
-    public void Afficher()
+    public bool EstMort()
+    {
+        return (pointDeVie < 1);
+    }
+
+    public virtual void Afficher()
     {
         Console.WriteLine("------ Information du personnage ------");
         Console.WriteLine($"nom : {nom}");
