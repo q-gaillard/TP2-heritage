@@ -34,7 +34,7 @@ class Personnage
         this.pointDeVie = 0;
     }
 
-    public virtual void RecevoirDegat(int degat)
+    public virtual void RecevoirDegats(int degat)
     {
         if (degat > pointDeVie)
         {
@@ -43,6 +43,25 @@ class Personnage
         else
         {
             pointDeVie = pointDeVie - degat;
+        }
+    }
+
+    public virtual void RecevoirDegats(int degat, int reduction)
+    {
+        if (degat-reduction > pointDeVie)
+        {
+            pointDeVie = 0;
+        }
+        else
+        {
+            if (degat - reduction < 0)
+            {
+                degat = 0;
+            }
+            else
+            {
+                pointDeVie = pointDeVie - (degat - reduction);
+            }
         }
     }
 

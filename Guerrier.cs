@@ -26,7 +26,7 @@ class Guerrier : Personnage
 
     public override void RecevoirDegat(int degat)
     {
-        if (degat-armure > pointDeVie)
+        if (degat - armure > pointDeVie)
         {
             pointDeVie = 0;
         }
@@ -39,6 +39,25 @@ class Guerrier : Personnage
             else
             {
                 pointDeVie = pointDeVie - (degat - armure);
+            }
+        }
+    }
+
+    public override void RecevoirDegat(int degat, int reduction)
+    {
+        if (degat - armure - reduction > pointDeVie)
+        {
+            pointDeVie = 0;
+        }
+        else
+        {
+            if (degat - armure - reduction < 0)
+            {
+                degat = 0;
+            }
+            else
+            {
+                pointDeVie = pointDeVie - (degat - armure - reduction);
             }
         }
     }
