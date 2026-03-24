@@ -62,6 +62,11 @@ class Guerrier : Personnage
         }
     }
 
+    public void Attaquer()
+    {
+        Console.WriteLine($"{nom} attaque !");
+    }
+
     public override void Afficher()
     {
         Console.WriteLine("------ Information du guerrier ------");

@@ -24,6 +24,11 @@ class Magicien : Personnage
         this.puissanceMagique = 0;
     }
 
+    public void LancerUnSort()
+    {
+        Console.WriteLine($"{nom} lance un sort !");
+    }
+
     public override void Afficher()
     {
         Console.WriteLine("------ Information du magicien ------");

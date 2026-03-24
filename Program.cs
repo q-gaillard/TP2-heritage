@@ -53,5 +53,12 @@ internal class Program
         perso1.RecevoirDegats(10, 5);
         perso1.Afficher();
         Console.WriteLine("");
+
+        //test attaques
+        Console.WriteLine("test attaques :");
+        Console.WriteLine("");
+        perso2.Attaquer();
+        Console.WriteLine("");
+        perso3.LancerUnSort();
     }  
 }
