@@ -81,14 +81,8 @@ internal class Program
             }
         }
 
-        Guerrier perso6 = new Guerrier("Link", 200, 50);
-        if (perso6 is Magicien)
-        {
-            Magicien casting = perso6;
-        }
-        else
-        {
-            Console.WriteLine("\n| ! | le casting est mauvais | ! |");
-        }
+        //ToString
+        Console.WriteLine("");
+        Console.WriteLine(perso1);
     }  
 }

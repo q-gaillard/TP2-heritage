@@ -34,6 +34,11 @@ class Personnage
         this.pointDeVie = 0;
     }
 
+    public override string ToString()
+    {
+        return $"{nom} | PV: {pointDeVie}";
+    }
+
     public virtual void RecevoirDegats(int degat)
     {
         if (degat > pointDeVie)
