@@ -93,5 +93,25 @@ internal class Program
         {
             archer.Tirer();
         }
+
+        // Réponse au question :
+        // 1) la surcharge rajoute un paramettre et la redéfinition modifie des paramettres
+        // 2) l'on utilise virtual et override pour adapter des methodes et fonctions selon les héritages de classe
+        // 3) le polymorphisme permet de crée des listes de classe mere, pour y ajouter également des classes filles
+        // 4) le casting peut porvoquer des erreurs si les classes filles utilisé ne correspondes pas
+        // 5) l'on vérifie le casting avant pour éviter les erreur expliqué dans la question 4
+
+        //ajoue personnel
+        Console.WriteLine("");
+        personnages[1].Afficher();
+        personnages[2].Afficher();
+        Console.WriteLine("");
+        if (personnages[2] is Magicien magicien)
+        {
+            magicien.LancerUnSort(personnages[1]);
+        }
+        Console.WriteLine("");
+        personnages[1].Afficher();
+        personnages[2].Afficher();
     }  
 }

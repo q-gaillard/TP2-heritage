@@ -37,6 +37,17 @@ class Archer : Personnage
     public void Tirer()
     {
         Console.WriteLine($"{nom} tire avec une precision de {precision} %");
+        var random = new Random();
+        int tire = random.Next(1, 100);
+        if (tire <= precision)
+        {
+            Console.WriteLine("-> Le tire à toucher la cible");
+        }
+        else
+        {
+            Console.WriteLine("le tire n'a pas toucher la cible");
+        }
+
     }
 
     public override void Afficher()

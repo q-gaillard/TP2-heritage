@@ -27,6 +27,13 @@ class Magicien : Personnage
     public void LancerUnSort()
     {
         Console.WriteLine($"{nom} lance un sort !");
+        Console.WriteLine($"-> le sort à une puissance de {puissanceMagique}");
+    }
+    public void LancerUnSort(Perosnnage cible)
+    {
+        Console.WriteLine($"{nom} lance un sort sur {cible.GetNom()} !");
+        Console.WriteLine($"-> le sort à une puissance de {puissanceMagique}");
+        cible.RecevoirDegats(puissanceMagique);
     }
 
     public override void Afficher()
