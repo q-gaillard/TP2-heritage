@@ -70,6 +70,15 @@ internal class Program
         {
             perso.Afficher();
             //perso.Attaquer()  <--- crée une erreur !
+
+            if (perso is Guerrier guerrier)
+            {
+                guerrier.Attaquer();
+            }
+            else if (perso is Magicien magicien)
+            {
+                magicien.LancerUnSort();
+            }
         }
     }  
 }
