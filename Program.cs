@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO.Pipes;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -84,5 +85,13 @@ internal class Program
         //ToString
         Console.WriteLine("");
         Console.WriteLine(perso1);
+
+        personnages.Add(new Archer("Robin des bois", 70, 80));
+        personnages[5].Afficher();
+        Console.WriteLine("");
+        if (personnages[5] is Archer archer)
+        {
+            archer.Tirer();
+        }
     }  
 }
