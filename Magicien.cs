@@ -1,4 +1,4 @@
-class Guerrier : Personnage
+class Magicien : Personnage
 {
     private int puissanceMagique;
 
@@ -11,13 +11,13 @@ class Guerrier : Personnage
         this.puissanceMagique = puissanceMagique;
     }
 
-    public Guerrier(string nom, int pointDeVie, int puissanceMagique) : base(nom, pointDeVie)
+    public Magicien(string nom, int pointDeVie, int puissanceMagique) : base(nom, pointDeVie)
     {
         this.nom = nom;
         this.pointDeVie = pointDeVie;
         this.puissanceMagique = puissanceMagique;
     }
-    public Guerrier() : base()
+    public Magicien() : base()
     {
         this.nom = "sans nom";
         this.pointDeVie = 0;
