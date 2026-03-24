@@ -69,6 +69,7 @@ internal class Program
         foreach (Personnage perso in personnages)
         {
             perso.Afficher();
+            //perso.Attaquer()  <--- crée une erreur !
         }
     }  
 }
