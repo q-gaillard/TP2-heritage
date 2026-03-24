@@ -41,5 +41,17 @@ internal class Program
         Console.WriteLine("");
         perso4.Afficher();
         perso5.Afficher();
+
+        //test surcharge
+        Console.WriteLine("test surcharge :");
+        Console.WriteLine("");
+        perso1.Afficher();
+        Console.WriteLine("");
+        perso1.RecevoirDegats(10);
+        perso1.Afficher();
+        Console.WriteLine("");
+        perso1.RecevoirDegats(10, 5);
+        perso1.Afficher();
+        Console.WriteLine("");
     }  
 }
