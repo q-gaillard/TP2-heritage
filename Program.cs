@@ -80,5 +80,15 @@ internal class Program
                 magicien.LancerUnSort();
             }
         }
+
+        Guerrier perso6 = new Guerrier("Link", 200, 50);
+        if (perso6 is Magicien)
+        {
+            Magicien casting = perso6;
+        }
+        else
+        {
+            Console.WriteLine("\n| ! | le casting est mauvais | ! |");
+        }
     }  
 }
