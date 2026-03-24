@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO.Pipes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,5 +61,14 @@ internal class Program
         perso2.Attaquer();
         Console.WriteLine("");
         perso3.LancerUnSort();
+
+        //liste de personnage
+        List<Personnage> personnages = new List<Personnage> { perso1, perso2, perso3, perso4, perso5 };
+        Console.WriteLine("liste de tout les personnages :");
+        Console.WriteLine("");
+        foreach (Personnage perso in personnages)
+        {
+            perso.Afficher();
+        }
     }  
 }
